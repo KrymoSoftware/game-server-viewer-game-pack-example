@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<language xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.woltlab.com"
+		  xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/6.1/language.xsd" languagecode="en">
+	<import>
+		<category name="wcf.gameServerViewer.gameObjectType">
+			<!-- The suffix is the value from the name element in objectType.xml. -->
+			<item name="wcf.gameServerViewer.gameObjectType.com.example.gameserverviewer.mygamepack.server.mycustomgame">
+				<![CDATA[My Custom Game]]></item>
+			<item name="wcf.gameServerViewer.gameObjectType.com.example.gameserverviewer.mygamepack.server.mysourcegame">
+				<![CDATA[My Source-based Game]]></item>
+		</category>
+	</import>
+</language>

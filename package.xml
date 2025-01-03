@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- The package name must be unique and should be prefixed with your domain name. -->
+<package xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 name="com.example.gameserverviewer.mygamepack"
+		 xmlns="http://www.woltlab.com"
+		 xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/6.1/package.xsd">
+	<packageinformation>
+		<packagename><![CDATA[Game Server Viewer: Example Game Pack]]></packagename>
+		<packagename language="de"><![CDATA[Gameserver-Viewer: Beispiel-Spielepaket]]></packagename>
+		<packagedescription>
+			<![CDATA[This package adds exemplary games to the Game Server Viewer.]]></packagedescription>
+		<packagedescription language="de">
+			<![CDATA[Dieses Paket fügt beispielhafte Spiele zum Gameserver-Viewer hinzu.]]></packagedescription>
+		<version>1.0.1</version>
+		<date>2025-01-03</date>
+		<packageurl><![CDATA[https://example.com]]></packageurl>
+	</packageinformation>
+
+	<authorinformation>
+		<author><![CDATA[Example Developer]]></author>
+		<authorurl><![CDATA[https://example.com]]></authorurl>
+	</authorinformation>
+
+	<requiredpackages>
+		<!-- The minimum version of the required package must be specified. -->
+		<!-- These are usually the latest versions. -->
+		<requiredpackage minversion="6.1.2">com.woltlab.wcf</requiredpackage>
+		<requiredpackage minversion="2.1.0">dev.tkirch.wsc.gameServerViewer</requiredpackage>
+		<!-- If your plugin adds a new game from the GameQ library, you need to have the GameQ Game Pack plugin installed. -->
+		<!-- Then you also need to require the GameQ Game Pack plugin. Otherwise, you can remove the following line. -->
+		<requiredpackage minversion="2.1.0">dev.tkirch.wsc.gameServerViewer.gameq</requiredpackage>
+	</requiredpackages>
+
+	<excludedpackages>
+		<!-- The version of the excluded package must be specified. -->
+		<!-- In this case, we exclude future versions of the required packages. -->
+		<!-- This is useful to not accidentally install the package on possibly incompatible versions due to breaking API changes. -->
+		<excludedpackage version="6.2.0 Alpha 1">com.woltlab.wcf</excludedpackage>
+		<excludedpackage version="2.2.0 Alpha 1">dev.tkirch.wsc.gameServerViewer</excludedpackage>
+		<!-- Remove the following line if you do not require the GameQ Game Pack plugin. -->
+		<excludedpackage version="2.2.0 Alpha 1">dev.tkirch.wsc.gameServerViewer.gameq</excludedpackage>
+	</excludedpackages>
+
+	<instructions type="install">
+		<instruction type="file"/>
+		<instruction type="objectType"/>
+		<instruction type="language"/>
+	</instructions>
+
+	<instructions type="update" fromversion="1.0.0">
+		<instruction type="file"/>
+		<instruction type="objectType"/>
+		<instruction type="language"/>
+	</instructions>
+</package>

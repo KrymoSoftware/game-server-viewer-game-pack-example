@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<data xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.woltlab.com"
+	  xsi:schemaLocation="http://www.woltlab.com https://www.woltlab.com/XSD/6.1/objectType.xsd">
+	<import>
+		<type>
+			<!-- Always make sure the prefix matches the package name from package.xml. -->
+			<!-- The suffix should be ".server." + the name of the game you are adding. -->
+			<name>com.example.gameserverviewer.mygamepack.server.mycustomgame</name>
+			<!-- Do not change the definition name! -->
+			<definitionname>dev.tkirch.wsc.gameServerViewer.server</definitionname>
+			<!-- The classname should be the fully qualified class name of your custom game protocol class. -->
+			<classname>wcf\system\gameserverviewer\game\MyCustomGameServer</classname>
+		</type>
+		<type>
+			<!-- Always make sure the prefix matches the package name from package.xml. -->
+			<!-- The suffix should be ".server." + the name of the game you are adding. -->
+			<name>com.example.gameserverviewer.mygamepack.server.mysourcegame</name>
+			<!-- Do not change the definition name! -->
+			<definitionname>dev.tkirch.wsc.gameServerViewer.server</definitionname>
+			<!-- Keep the class name as it is when adding a game for an already implemented GameQ protocol. -->
+			<classname>wcf\system\gameserverviewer\game\CustomGameQServer</classname>
+			<!-- The server type should be the value of the respective $name property in the GameQ protocol class. -->
+			<!-- In our example, the Source protocol is used, which is the most common protocol. -->
+			<servertype><![CDATA[source]]></servertype>
+			<!-- When adding a game server to the Game Server Viewer, you usually specify the game port. -->
+			<!-- However, some games have a different query port. -->
+			<!-- In many cases, the query port is the game port + an arbitrary value set by the game developers. -->
+			<!-- You can specify this arbitrary value here to automatically determine the query port. -->
+			<!-- Note that this is optional and the element can be omitted if there is no fixed port diff. -->
+			<portdiff>1</portdiff>
+			<!-- If the query port does not always match the game port, add the following element. -->
+			<!-- This enables the user to specify a custom query port when adding/editing a game server. -->
+			<hascustomqueryport>1</hascustomqueryport>
+		</type>
+	</import>
+</data>
